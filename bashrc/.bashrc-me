@@ -1,4 +1,4 @@
-export PATH=~/.npm-global/bin:$PATH
+export PATH=~/.local/share/npm-global/bin:$PATH
 export SSH_ASKPASS=/usr/bin/ksshaskpass
 
 export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
