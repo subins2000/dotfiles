@@ -111,8 +111,8 @@ bindsym $mod+a focus parent
 bindsym $mod+1 workspace 1-coding
 bindsym $mod+2 workspace 2-chat
 bindsym $mod+3 workspace 3-internet
-bindsym $mod+4 workspace 4-movie
-bindsym $mod+5 workspace 5
+bindsym $mod+4 workspace 4-സംഗീതം
+bindsym $mod+5 workspace 5-സിനിമ
 bindsym $mod+6 workspace 6
 bindsym $mod+7 workspace 7
 bindsym $mod+8 workspace 8
@@ -123,8 +123,8 @@ bindsym $mod+0 workspace 10
 bindsym $mod+Shift+1 move container to workspace 1-coding
 bindsym $mod+Shift+2 move container to workspace 2-chat
 bindsym $mod+Shift+3 move container to workspace 3-internet
-bindsym $mod+Shift+4 move container to workspace 4-movie
-bindsym $mod+Shift+5 move container to workspace 5
+bindsym $mod+Shift+4 move container to workspace 4-സംഗീതം
+bindsym $mod+Shift+5 move container to workspace 5-സിനിമ
 bindsym $mod+Shift+6 move container to workspace 6
 bindsym $mod+Shift+7 move container to workspace 7
 bindsym $mod+Shift+8 move container to workspace 8
@@ -217,9 +217,11 @@ assign [class="(?i)firefox"] 3-internet
 for_window [class="(?i)firefox"] focus
 assign [class="(?i)Telegram"] 2-chat
 for_window [class="(?i)Telegram"] focus
-assign [class="(?i)thunderbird"] 4-movie
+assign [class="(?i)Clementine"] 4-സംഗീതം
+for_window [class="(?i)Clementine"] focus
+assign [class="(?i)thunderbird"] 5-സിനിമ
 for_window [class="(?i)thunderbird"] focus
-assign [class="(?i)smplayer"] 4-movie
+assign [class="(?i)smplayer"] 5-സിനിമ
 for_window [class="(?i)smplayer"] focus
 
 bar {
