@@ -235,3 +235,5 @@ bindsym XF86AudioLowerVolume exec amixer -q -D pulse sset Master 5%-; exec pkill
 bindsym XF86AudioMute exec amixer -q -D pulse sset Master toggle; exec pkill -RTMIN+10
 
 exec "feh --bg-scale '/usr/share/wallpapers/Romania Serena/contents/images/3506x2329.jpg'"
+
+no_focus [window_type="notification"]
