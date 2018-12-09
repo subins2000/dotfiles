@@ -225,8 +225,14 @@ assign [class="(?i)smplayer"] 5-സിനിമ
 for_window [class="(?i)smplayer"] focus
 
 bar {
+    verbose yes
     status_command i3blocks
     tray_output primary
+    font pango:Noto Sans Malayalam, Helvetica Neue, FontAwesome 15
+    colors {
+        statusline #ffffff
+        background $transparent
+    }
 }
 
 # Make volume keys on keyboard work
