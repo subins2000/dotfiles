@@ -28,70 +28,82 @@ command=/usr/share/i3blocks/$BLOCK_NAME
 separator_block_width=15
 markup=none
 
+[temperature]
+command=sensors -u coretemp-isa-0000 | grep temp1_input | cut -c 15-17 | xargs printf 'CPU %d°'
+interval=10
+separator=false
+
+# CPU usage
+#
+# The script may be called with -w and -c switches to specify thresholds,
+# see the script for details.
+[cpu_usage]
+label=
+interval=10
+min_width=100.00
+#separator=false
+
 # Volume indicator
 #
 # The first parameter sets the step (and units to display)
 # The second parameter overrides the mixer selection
 # See the script for details.
-[microphone]
-label=
-interval=5
-separator=false
-command=/home/balasankarc/.i3/microphone
-
 [volume]
 label=VOL
-label=♪
+#label=♪
 instance=Master
 #instance=PCM
-interval=once
+interval=10
 signal=10
+
+# Memory usage
+#
+# The type defaults to "mem" if the instance is not specified.
+[memory]
+label=MEM
+interval=30
+
+# Disk usage
+#
+# The directory defaults to $HOME if the instance is not specified.
+# The script may be called with a optional argument to set the alert
+# (defaults to 10 for 10%).
+# [disk]
+# label=HOME
+# instance=/mnt/data
+# interval=30
 
 # Network interface monitoring
 #
 # If the instance is not specified, use the interface used for default route.
 # The address can be forced to IPv4 or IPv6 with -4 or -6 switches.
-[wifi]
-label=
-instance=wlan0
+[iface]
+color=#00FF00
 interval=10
 separator=false
-#[iface]
-#label=E
-#instance=eth0
-#color=#00FF00
+
+[wifi]
+instance=wlp2s0
+interval=10
+separator=false
+
+#[load_average]
 #interval=10
-#separator=false
-
-[bandwidth2]
-instance=wlan0;in
-label=
-interval=1
-
-[bandwidth2]
-instance=wlan0;out
-label=
-interval=1
 
 # Battery indicator
 #
 # The battery instance defaults to 0.
 [battery]
-label=
-#instance=0
-interval=30
-
-[battery]
 label=BAT
-#label=
-instance=1
+#label=⚡
+#instance=1
 interval=30
 
 # Date Time
 #
-#[time]
-#command=date '+%m-%d %a %I:%M:%S %p'
-#interval=5
+[time]
+command=date '+%Y-%m-%d %H:%M:%S'
+interval=5
 
 # Generic media player support
 #
@@ -113,9 +125,7 @@ interval=30
 # Support multiple chips, though lm-sensors.
 # The script may be called with -w and -c switches to specify thresholds,
 # see the script for details.
-#[temperature]
-#label=TEMP
-#interval=10
+
 
 # Key indicators
 #
@@ -123,10 +133,10 @@ interval=30
 #
 # bindsym --release Caps_Lock exec pkill -SIGRTMIN+11 i3blocks
 # bindsym --release Num_Lock  exec pkill -SIGRTMIN+11 i3blocks
-[keyindicator]
-instance=CAPS
-interval=once
-signal=11
+#[keyindicator]
+#instance=CAPS
+#interval=once
+#signal=11
 
 #[keyindicator]
 #instance=NUM
