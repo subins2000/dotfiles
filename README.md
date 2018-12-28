@@ -5,3 +5,7 @@
   ```bash
   ~/.bashrc-me
   ```
+
+## Requirements
+
+* sysstat
