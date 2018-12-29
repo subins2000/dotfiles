@@ -28,6 +28,14 @@ command=/usr/share/i3blocks/$BLOCK_NAME
 separator_block_width=15
 markup=none
 
+# Generic media player support
+# This displays "ARTIST - SONG" if a music is playing.
+# Supported players are: spotify, vlc, audacious, xmms2, mplayer, and others.
+[mediaplayer]
+interval=5
+signal=10
+color=#00FF00
+
 [temperature]
 command=sensors -u coretemp-isa-0000 | grep temp1_input | cut -c 15-17 | xargs printf 'CPU %d°'
 interval=10
@@ -104,15 +112,6 @@ interval=30
 [time]
 command=date '+%Y-%m-%d %H:%M:%S'
 interval=5
-
-# Generic media player support
-#
-# This displays "ARTIST - SONG" if a music is playing.
-# Supported players are: spotify, vlc, audacious, xmms2, mplayer, and others.
-#[mediaplayer]
-#instance=spotify
-#interval=5
-#signal=10
 
 # OpenVPN support
 #
