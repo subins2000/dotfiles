@@ -32,9 +32,21 @@ markup=none
 # This displays "ARTIST - SONG" if a music is playing.
 # Supported players are: spotify, vlc, audacious, xmms2, mplayer, and others.
 [mediaplayer]
+label=♪
 interval=5
 signal=10
 color=#00FF00
+separator=false
+
+# Volume indicator
+#
+# The first parameter sets the step (and units to display)
+# The second parameter overrides the mixer selection
+# See the script for details.
+[volume]
+label=♪
+interval=10
+signal=10
 
 [temperature]
 command=sensors -u coretemp-isa-0000 | grep temp1_input | cut -c 15-17 | xargs printf 'CPU %d°'
@@ -50,19 +62,6 @@ label=
 interval=10
 min_width=100.00
 #separator=false
-
-# Volume indicator
-#
-# The first parameter sets the step (and units to display)
-# The second parameter overrides the mixer selection
-# See the script for details.
-[volume]
-label=VOL
-#label=♪
-instance=Master
-#instance=PCM
-interval=10
-signal=10
 
 # Memory usage
 #
