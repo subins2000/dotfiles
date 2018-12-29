@@ -9,3 +9,7 @@
 ## Requirements
 
 * sysstat
+  ```bash
+  sudo apt install sysstat
+  ```
+* [playerctl](https://github.com/acrisci/playerctl/releases)
