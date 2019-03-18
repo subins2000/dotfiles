@@ -216,13 +216,10 @@ for_window [class="(?i)chrome"] focus
 assign [class="(?i)firefox"] 3-internet
 for_window [class="(?i)firefox"] focus
 assign [class="(?i)Telegram"] 2-chat
-for_window [class="(?i)Telegram"] focus
+assign [class="(?i)Riot"] 2-chat
 assign [class="(?i)Clementine"] 4-സംഗീതം
-for_window [class="(?i)Clementine"] focus
 assign [class="(?i)thunderbird"] 5-സിനിമ
-for_window [class="(?i)thunderbird"] focus
 assign [class="(?i)smplayer"] 5-സിനിമ
-for_window [class="(?i)smplayer"] focus
 
 # class                 border  bground text    indicator child_border
 client.focused          #6272A4 #6272A4 #F8F8F2 #6272A4   #6272A4
