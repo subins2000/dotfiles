@@ -1,0 +1,7 @@
+[user]
+	email = subins2000@gmail.com
+	name = Subin Siby
+[url "https://anongit.kde.org/"]
+	insteadOf = kde:
+[url "git@git.kde.org:"]
+	pushInsteadOf = kde:
