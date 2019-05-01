@@ -256,6 +256,6 @@ bindsym XF86AudioMute exec amixer -q -D pulse sset Master toggle; exec pkill -RT
 
 # Randomize wallpaper
 exec_always --no-startup-id killall random-wallpaper.sh
-exec_always --no-startup-id $HOME/.config/i3/i3scripts/random-wallpaper.sh 100
+exec_always --no-startup-id $HOME/.config/i3/i3scripts/random-wallpaper.sh 500
 
 no_focus [window_type="notification"]
