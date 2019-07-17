@@ -219,6 +219,7 @@ assign [class="(?i)Telegram"] 2-chat
 assign [class="(?i)Riot"] 2-chat
 assign [class="(?i)Clementine"] 4-സംഗീതം
 assign [class="(?i)thunderbird"] 5-സിനിമ
+assign [class="(?i)kmail"] 5-സിനിമ
 assign [class="(?i)smplayer"] 5-സിനിമ
 
 # class                 border  bground text    indicator child_border
