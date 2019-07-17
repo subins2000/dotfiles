@@ -2,4 +2,8 @@ export PATH=~/.local/share/npm-global/bin:/home/linuxbrew/.linuxbrew/bin:$PATH
 export SSH_ASKPASS=/usr/bin/ksshaskpass
 
 export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
-source ~/.local/bin/virtualenvwrapper.sh
+#source ~/.local/bin/virtualenvwrapper.sh
+
+export GTK_IM_MODULE=ibus
+export XMODIFIERS=@im=ibus
+export QT_IM_MODULE=ibus
