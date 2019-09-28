@@ -108,6 +108,7 @@ bindsym $mod+a focus parent
 #bindsym $mod+d focus child
 
 # switch to workspace
+bindsym $mod+grave workspace 0
 bindsym $mod+1 workspace 1-coding
 bindsym $mod+2 workspace 2-chat
 bindsym $mod+3 workspace 3-internet
@@ -120,6 +121,7 @@ bindsym $mod+9 workspace 9
 bindsym $mod+0 workspace 10
 
 # move focused container to workspace
+bindsym $mod+Shift+grave move container to workspace 0
 bindsym $mod+Shift+1 move container to workspace 1-coding
 bindsym $mod+Shift+2 move container to workspace 2-chat
 bindsym $mod+Shift+3 move container to workspace 3-internet
@@ -192,11 +194,9 @@ for_window [class="yakuake"] floating enable;
 
 ## Plasma Integration
 # Try to kill the wallpaper set by Plasma (it takes up the entire workspace and hides everythiing)
-exec --no-startup-id wmctrl -c Plasma
-for_window [title="Desktop — Plasma"] kill; floating enable; border none
-
 ## Avoid tiling popups, dropdown windows from plasma
 # for the first time, manually resize them, i3 will remember the setting for floating windows
+for_window [title="Desktop — Plasma"] kill; floating enable; border none
 for_window [class="plasmashell"] floating enable;
 for_window [class="Plasma"] floating enable; border none
 for_window [title="plasma-desktop"] floating enable; border none
@@ -205,6 +205,8 @@ for_window [class="krunner"] floating enable; border none
 for_window [class="Kmix"] floating enable; border none
 for_window [class="Klipper"] floating enable; border none
 for_window [class="Plasmoidviewer"] floating enable; border none
+for_window [class="(?i)*nextcloud*"] floating disable
+for_window [class="plasmashell" window_type="notification"] floating enable, border none, move right 700px, move down 450px, no_focus 
 
 # Subin
 
