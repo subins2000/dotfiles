@@ -1,9 +1,23 @@
-export PATH=~/.local/share/npm-global/bin:/home/linuxbrew/.linuxbrew/bin:$PATH
+export PATH=~/.local/bin:~/.local/share/npm-global/bin:/home/linuxbrew/.linuxbrew/bin:$HOME/.cargo/bin:$PATH
 export SSH_ASKPASS=/usr/bin/ksshaskpass
 
 export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
 #source ~/.local/bin/virtualenvwrapper.sh
 
 export GTK_IM_MODULE=ibus
+export QT4_IM_MODULE=xim
+export QT_IM_MODULE=xim
 export XMODIFIERS=@im=ibus
-export QT_IM_MODULE=ibus
+
+#eval "$(starship init bash)"
+
+prompt_shelby_load() {
+if [ $? != 0 ]; then
+    local prompt_symbol="\[\e[0;31m\]❯\[\e[0m\]"
+  else
+    local prompt_symbol="\[\e[0;32m\]❯\[\e[0m\]"
+  fi
+
+  PS1="$(~/.local/bin/shelby)\n${prompt_symbol} " 
+}
+PROMPT_COMMAND=prompt_shelby_load

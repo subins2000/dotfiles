@@ -5,3 +5,6 @@
 	insteadOf = kde:
 [url "git@git.kde.org:"]
 	pushInsteadOf = kde:
+[gitreview]
+	remote = origin
+	username = subins2000
