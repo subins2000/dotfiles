@@ -92,6 +92,11 @@ interval=30
 #
 # If the instance is not specified, use the interface used for default route.
 # The address can be forced to IPv4 or IPv6 with -4 or -6 switches.
+[ssid]
+color=#00FF00
+command=echo $(iwconfig wlp2s0 | grep ESSID | awk '{print $4}' | tr -d 'ESSID:"')
+interval=10
+
 [iface]
 color=#00FF00
 interval=10
