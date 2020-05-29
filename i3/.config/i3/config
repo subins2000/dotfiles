@@ -284,3 +284,6 @@ no_focus [window_type="notification"]
 
 # screenshot
 bindsym Print exec spectacle
+
+# make firefox picture in picture sticky across all workspaces
+for_window [title="Picture-in-Picture"] sticky enable
