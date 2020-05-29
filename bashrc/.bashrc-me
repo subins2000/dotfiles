@@ -21,3 +21,5 @@ if [ $? != 0 ]; then
   PS1="$(~/.local/bin/shelby)\n${prompt_symbol} " 
 }
 PROMPT_COMMAND=prompt_shelby_load
+
+alias t="todo-txt"
