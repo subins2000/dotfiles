@@ -23,3 +23,5 @@ if [ $? != 0 ]; then
 PROMPT_COMMAND=prompt_shelby_load
 
 alias t="todo-txt"
+alias pbcopy='xclip -selection clipboard'
+alias pbpaste='xclip -selection clipboard -o'
