@@ -1,4 +1,4 @@
-export PATH=~/.local/bin:~/.local/share/npm-global/bin:/home/linuxbrew/.linuxbrew/bin:$HOME/.cargo/bin:$PATH
+export PATH=~/go/bin:~/.config/yarn/global/node_modules/.bin:~/.local/bin:~/.local/share/npm-global/bin:/home/linuxbrew/.linuxbrew/bin:$HOME/.cargo/bin:$PATH
 export SSH_ASKPASS=/usr/bin/ksshaskpass
 
 export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
@@ -25,3 +25,15 @@ PROMPT_COMMAND=prompt_shelby_load
 alias t="todo-txt"
 alias pbcopy='xclip -selection clipboard'
 alias pbpaste='xclip -selection clipboard -o'
+
+# https://devcenter.heroku.com/articles/heroku-cli#standalone-installation
+alias heroku="/usr/local/bin/heroku"
+
+# deta
+alias deta="~/.deta/bin/deta"
+
+# asdf
+. $HOME/.asdf/asdf.sh
+. $HOME/.asdf/completions/asdf.bash
+
+export HISTFILESIZE=5000

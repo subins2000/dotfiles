@@ -8,3 +8,11 @@
 [gitreview]
 	remote = origin
 	username = subins2000
+[core]
+	eol = lf
+	autocrlf = false
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true

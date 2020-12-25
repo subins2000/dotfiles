@@ -229,6 +229,7 @@ focus_on_window_activation none
 # Subin
 
 #Assigning programs to workspaces
+assign [class="(?i)ഡോൾഫിൻ"] 0
 assign [class="(?i)subl"] 1-coding
 for_window [class="(?i)subl"] focus
 assign [class="(?i)codium"] 1-coding
@@ -236,9 +237,10 @@ assign [class="(?i)chrome"] 3-internet
 for_window [class="(?i)chrome"] focus
 assign [class="(?i)firefox"] 3-internet
 for_window [class="(?i)firefox"] focus
-assign [class="(?i)Telegram"] 2-chat
-assign [class="(?i)Riot"] 2-chat
+assign [class="(?i)Konsole"] 2-chat
 assign [class="(?i)Clementine"] 4-സംഗീതം
+assign [class="(?i)Telegram"] 5-സിനിമ
+assign [class="(?i)Element"] 5-സിനിമ
 assign [class="(?i)thunderbird"] 5-സിനിമ
 assign [class="(?i)kmail"] 5-സിനിമ
 assign [class="(?i)smplayer"] 5-സിനിമ
@@ -256,7 +258,7 @@ bar {
   verbose yes
   status_command i3blocks
   tray_output primary
-  font pango:Noto Sans Malayalam, Helvetica Neue, FontAwesome 15
+  font pango:Manjari, Helvetica Neue, FontAwesome 15
 
   colors {
     background #282A36
@@ -288,3 +290,8 @@ bindsym Print exec spectacle
 
 # make firefox picture in picture sticky across all workspaces
 for_window [title="Picture-in-Picture"] sticky enable
+bindsym $mod+Shift+S floating toggle; sticky enable
+# bindsym $mod+Shift+S floating toggle; resize set 400 300; sticky enable; move window to position 1900 1100
+
+# Mute chromium shortcut
+bindsym Shift+F12 exec $HOME/.config/i3/i3scripts/mute-app.sh Chromium
