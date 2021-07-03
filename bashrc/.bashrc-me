@@ -1,4 +1,4 @@
-export PATH=~/go/bin:~/.config/yarn/global/node_modules/.bin:~/.local/bin:~/.local/share/npm-global/bin:/home/linuxbrew/.linuxbrew/bin:$HOME/.cargo/bin:$PATH
+export PATH=~/go/bin:~/.config/yarn/global/node_modules/.bin:~/.local/bin:~/.local/share/npm-global/bin:/home/linuxbrew/.linuxbrew/bin:$HOME/.cargo/bin:/media/mint/lizzie/Softwares/flutter/bin:$PATH
 export SSH_ASKPASS=/usr/bin/ksshaskpass
 
 export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
