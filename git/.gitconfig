@@ -16,3 +16,11 @@
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
 	required = true
+[alias]
+	s = status
+	ci = commit
+	ch = checkout
+	br = branch
+	rb = rebase
+	p = pull
+	last = log -1 HEAD
