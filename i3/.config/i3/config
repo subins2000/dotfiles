@@ -47,7 +47,7 @@ bindsym $mod+Shift+q kill
 
 
 # rofi
-bindsym $mod+d exec --no-startup-id i3-dmenu-desktop --dmenu='rofi -i -dmenu -font "IBM Plex Sans Medium 15" '
+bindsym $mod+d exec --no-startup-id i3-dmenu-desktop --dmenu='rofi -i -dmenu -font "IBM Plex Sans Medium 24" '
 # Screenshot (now provided by Plasma)
 # bindsym Print exec --no-startup-id spectacle
 
@@ -196,7 +196,7 @@ for_window [class="yakuake"] floating enable;
 # Try to kill the wallpaper set by Plasma (it takes up the entire workspace and hides everythiing)
 ## Avoid tiling popups, dropdown windows from plasma
 # for the first time, manually resize them, i3 will remember the setting for floating windows
-for_window [title="Desktop — Plasma"] kill; floating enable; border none
+for_window [title="Desktop @ QRect.*"] kill; floating enable; border none
 for_window [title="പണിയിടം — പ്ലാസ്മ"] kill; floating enable; bord$
 for_window [class="plasmashell"] floating enable;
 for_window [class="Plasma"] floating enable; border none
