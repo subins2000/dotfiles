@@ -1,0 +1,48 @@
+/**
+ * Thanks to https://github.com/SocketByte/.dotfiles-sway/blob/master/.config/waybar/style.css
+ * for a minimal quickstart template.
+ * My (Subin) modifications are licensed under CC0
+*/
+
+* {
+  font-size: 12pt;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  text-shadow: none;
+  transition-duration: 0s;
+}
+
+#waybar, #workspaces {
+  background: #1b182c;
+  color: #fff;
+}
+
+window#waybar {
+  opacity: 0.85;
+}
+
+#window,
+#battery,
+#memory,
+#disk,
+#pulseaudio,
+#custom-weather,
+#cpu {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+#workspaces {
+  font-family: "Manjari";
+}
+
+#workspaces button {
+  color: white;
+  background: transparent;
+  padding: 0 5px;
+}
+
+#workspaces button.focused {
+  background: #7a2043;
+}

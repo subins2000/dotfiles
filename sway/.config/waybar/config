@@ -1,0 +1,62 @@
+{
+    "position": "bottom",
+    "layer": "bottom",
+    "modules-left": ["sway/workspaces", "sway/mode"],
+    "modules-center": [],
+    "modules-right": ["custom/weather", "memory", "cpu", "pulseaudio", "tray", "battery", "clock"],
+    "clock": {
+        "format": "{:%Y-%m-%d %H:%M:%S}",
+        "tooltip": false,
+    },
+    "battery": {
+        "interval": 60,
+        "states": {
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{capacity}% {icon}",
+        "format-icons": ["", "", "", "", ""]
+    },
+    "tray": {
+        "icon-size": 21,
+        "spacing": 10
+    },
+    "network": {
+        "format": "{ifname}",
+        "format-wifi": "{essid} ({signalStrength}%) ",
+        "format-ethernet": "{ipaddr}/{cidr} 󰊗",
+        "tooltip-format": "{ifname} via {gwaddr} 󰊗",
+        "tooltip-format-wifi": "{essid} ({signalStrength}%) ",
+        "tooltip-format-ethernet": "{ifname} ",
+        "tooltip-format-disconnected": "Disconnected"
+    },
+    "pulseaudio": {
+        "format": "{volume}% {icon}",
+        "format-bluetooth": "{volume}% {icon}",
+        "format-muted": "",
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", ""]
+        },
+        "scroll-step": 1,
+        "on-click": "pavucontrol"
+    },
+    "memory": {
+        "interval": 30,
+        "format": "{used:0.1f}G/{total:0.1f}G"
+    },
+    "cpu": {
+        "interval": 10,
+        "format": "{}% "
+    },
+    "custom/weather": {
+        "tooltip": false,
+        "exec": "curl -Ss 'https://wttr.in?0&T&Q' | cut -c 16- | head -2 | xargs echo",
+        "interval": 800
+    }
+}

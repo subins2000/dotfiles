@@ -44,14 +44,32 @@ set $term konsole
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
-set $menu dmenu_path | wofi --dmenu | xargs swaymsg exec --
+set $menu dmenu_path | wofi --show=drun | xargs swaymsg exec --
 
 include /etc/sway/config-vars.d/*
 
 ### Output configuration
 #
-# Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
+
+output eDP-1 {
+   # ...config options...
+   mode 2560x1600@60Hz
+
+   scale 2
+
+   # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
+   bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
+}
+
+# GTK
+# This is the only place where you must set GTK scaling
+set $gnome-schema org.gnome.desktop.interface
+exec_always {
+    gsettings set org.gnome.desktop.interface gtk-theme 'Arc-Darker'  
+    gsettings set org.gnome.desktop.interface icon-theme 'Papirus-Dark' 
+    gsettings set org.gnome.desktop.interface text-scaling-factor 1
+    gsettings set org.gnome.desktop.interface cursor-size $cursor_size
+}
 
 ### Idle configuration
 #
@@ -215,10 +233,8 @@ bindsym $mod+r mode "resize"
 # Read `man 5 sway-bar` for more information about this section.
 bar {
     position bottom
-
-    # When the status_command prints a new line to stdout, swaybar updates.
-    # The default just shows the current date and time.
-    status_command i3blocks
+    
+    swaybar_command waybar
 
     tray_output primary
     font pango:Manjari, Helvetica Neue, FontAwesome 15
@@ -236,26 +252,9 @@ bar {
     }
 }
 
-include /etc/sway/config.d/*
+exec_always nm-applet --indicator
 
-## Plasma Integration
-# Try to kill the wallpaper set by Plasma (it takes up the entire workspace and hides everythiing)
-## Avoid tiling popups, dropdown windows from plasma
-# for the first time, manually resize them, i3 will remember the setting for floating windows
-for_window [title="Desktop — Plasma"] kill; floating enable; border none
-for_window [title="പണിയിടം — പ്ലാസ്മ"] kill; floating enable; bord$
-for_window [class="plasmashell"] floating enable;
-for_window [class="Plasma"] floating enable; border none
-for_window [class="പ്ലാസ്മ"] floating enable; border none
-for_window [title="plasma-desktop"] floating enable; border none
-for_window [title="win7"] floating enable; border none
-for_window [class="krunner"] floating enable; border none
-for_window [class="Kmix"] floating enable; border none
-for_window [class="Klipper"] floating enable; border none
-for_window [class="Plasmoidviewer"] floating enable; border none
-for_window [class="plasmashell" window_type="notification"] floating enable, border none, move right 700px, move down 450px
-no_focus [class="plasmashell" window_type="notification"]
-no_focus [class="plasmashell" window_type="on_screen_display"]
+include /etc/sway/config.d/*
 
 # Float by type
 for_window [window_role="pop-up"] floating enable

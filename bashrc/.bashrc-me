@@ -1,4 +1,10 @@
-export PATH=~/go/bin:~/.config/yarn/global/node_modules/.bin:~/.local/bin:~/.local/share/npm-global/bin:/home/linuxbrew/.linuxbrew/bin:$HOME/.cargo/bin:/media/mint/lizzie/Softwares/flutter/bin:/usr/local/bin:$PATH
+# sway themeing
+export QT_QPA_PLATFORMTHEME=qt5ct
+
+export PATH=~/go/bin:/usr/local/bin:$PATH
+export LD_LIBRARY_PATH=/usr/local/lib:$LD_LIBRARY_PATH
+export PKG_CONFIG_PATH=/usr/local/lib/pkgconfig:$PKG_CONFIG_PATH
+
 export SSH_ASKPASS=/usr/bin/ksshaskpass
 
 export GTK_IM_MODULE=ibus
@@ -9,8 +15,8 @@ export XMODIFIERS=@im=ibus
 eval "$(starship init bash)"
 
 alias t="todo-txt"
-alias pbcopy='wl-copy'
-alias pbpaste='wl-paste'
+alias pbcopy='xclip -selection clipboard'
+alias pbpaste='xclip -selection clipboard -o'
 
 # asdf
 #. $HOME/.asdf/asdf.sh
