@@ -48,6 +48,13 @@ set $menu dmenu_path | wofi --show=drun | xargs swaymsg exec --
 
 include /etc/sway/config-vars.d/*
 
+# Input
+
+input 1452:833:Apple_Internal_Keyboard_/_Trackpad {
+    scroll_factor 0.2
+    natural_scroll disabled
+}
+
 ### Output configuration
 #
 
