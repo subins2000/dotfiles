@@ -233,6 +233,7 @@ assign [class="(?i)ഡോൾഫിൻ"] 0
 assign [class="(?i)subl"] 1-coding
 for_window [class="(?i)subl"] focus
 assign [class="(?i)codium"] 1-coding
+assign [class="(?i)code"] 1-coding
 assign [class="(?i)chrome"] 3-internet
 for_window [class="(?i)chrome"] focus
 assign [class="(?i)firefox"] 3-internet
