@@ -57,8 +57,7 @@ interval=10
 signal=10
 
 [temperature]
-command=sensors -u coretemp-isa-0000 | grep temp1_input | cut -c 15-17 | xargs printf 'CPU %d°'
-interval=10
+interval=30
 separator=false
 
 # CPU usage
@@ -66,8 +65,8 @@ separator=false
 # The script may be called with -w and -c switches to specify thresholds,
 # see the script for details.
 [cpu_usage]
-label=
-interval=10
+label=CPU
+interval=30
 min_width=100.00
 #separator=false
 
@@ -106,6 +105,7 @@ separator=false
 instance=wlp2s0
 interval=10
 separator=false
+label=WiFi
 
 #[load_average]
 #interval=10

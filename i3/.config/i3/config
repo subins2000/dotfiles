@@ -30,8 +30,8 @@ set $mod Mod4
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font pango:Helvetica Neue, FontAwesome 11
- 
+font pango:Helvetica Neue, FontAwesome 12
+
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
 #font pango:DejaVu Sans Mono 8
@@ -179,7 +179,7 @@ bindsym $mod+r mode "resize"
 # i3bar
 #bar {
 #        verbose yes
-#        position bottom 
+#        position bottom
 #        status_command i3blocks
 #        i3bar_command i3bar -t
 #        colors {
@@ -208,7 +208,8 @@ for_window [class="Kmix"] floating enable; border none
 for_window [class="Klipper"] floating enable; border none
 for_window [class="Plasmoidviewer"] floating enable; border none
 for_window [class="(?i)*nextcloud*"] floating disable
-for_window [class="plasmashell" window_type="notification"] floating enable, border none, move right 700px, move down 450px
+for_window [class="plasmashell" window_type="notification"] floating enable, border none, move right 700px, move d
+own 450px
 no_focus [class="plasmashell" window_type="notification"]
 no_focus [class="plasmashell" window_type="on_screen_display"]
 
@@ -229,7 +230,7 @@ focus_on_window_activation none
 # Subin
 
 #Assigning programs to workspaces
-assign [class="(?i)ഡോൾഫിൻ"] 0
+assign [class="(?i)dolphin"] 0
 assign [class="(?i)subl"] 1-coding
 for_window [class="(?i)subl"] focus
 assign [class="(?i)codium"] 1-coding
@@ -239,9 +240,10 @@ for_window [class="(?i)chrome"] focus
 assign [class="(?i)firefox"] 3-internet
 for_window [class="(?i)firefox"] focus
 assign [class="(?i)Konsole"] 2-chat
+assign [class="(?i)Slack"] 2-chat
 assign [class="(?i)Clementine"] 4-സംഗീതം
-assign [class="(?i)Telegram"] 5-സിനിമ
-assign [class="(?i)Element"] 5-സിനിമ
+assign [class="(?i)Telegram"] 4-സംഗീതം
+assign [class="(?i)Element"] 4-സംഗീതം
 assign [class="(?i)thunderbird"] 5-സിനിമ
 assign [class="(?i)kmail"] 5-സിനിമ
 assign [class="(?i)smplayer"] 5-സിനിമ
@@ -259,7 +261,7 @@ bar {
   verbose yes
   status_command i3blocks
   tray_output primary
-  font pango:Manjari, Helvetica Neue, FontAwesome 15
+  font pango:Manjari, Helvetica Neue, FontAwesome 13
 
   colors {
     background #282A36
@@ -275,7 +277,7 @@ bar {
 }
 
 # Make volume keys on keyboard work
-bindsym XF86AudioRaiseVolume exec amixer -q -D pulse sset Master 5%+; exec pkill -RTMIN+10 i3blocks 
+bindsym XF86AudioRaiseVolume exec amixer -q -D pulse sset Master 5%+; exec pkill -RTMIN+10 i3blocks
 bindsym XF86AudioLowerVolume exec amixer -q -D pulse sset Master 5%-; exec pkill -RTMIN+10 i3blocks
 bindsym XF86AudioMute exec amixer -q -D pulse sset Master toggle; exec pkill -RTMIN+10
 
@@ -285,9 +287,6 @@ exec_always --no-startup-id $HOME/.config/i3/i3scripts/random-wallpaper.sh 500
 #exec_always --no-startup-id $HOME/.config/i3/i3scripts/process-wallpaper.sh 500
 
 no_focus [window_type="notification"]
-
-# screenshot
-bindsym Print exec spectacle
 
 # make firefox picture in picture sticky across all workspaces
 for_window [title="Picture-in-Picture"] sticky enable

@@ -13,14 +13,50 @@ export QT_IM_MODULE=xim
 export XMODIFIERS=@im=ibus
 
 eval "$(starship init bash)"
+eval "$(mise activate bash)"
+eval "$(ssh-agent)"
+
+if command -v fzf &> /dev/null; then
+  source /usr/share/bash-completion/completions/fzf
+  source /usr/share/doc/fzf/examples/key-bindings.bash
+fi
 
 alias t="todo-txt"
 alias pbcopy='xclip -selection clipboard'
 alias pbpaste='xclip -selection clipboard -o'
 
-# asdf
-#. $HOME/.asdf/asdf.sh
-#. $HOME/.asdf/completions/asdf.bash
-
 export HISTFILESIZE=5000
-alias code="codium"
+
+alias t="todo.sh"
+alias be="bundle exec"
+alias bec="bundle exec rails c"
+alias cypress_run="(cd cypress-tests && yarn && yarn cy:run)"
+
+alias oh="pass otp bb/heroku | pbcopy"
+alias og="pass otp bb/mail | pbcopy"
+alias ogh="pass otp primary/github | pbcopy"
+alias ogl="pass otp primary/gitlab | pbcopy"
+
+alias cdcal="cd ~/bb/neeto-cal/neeto-cal-web"
+alias cdgh="cd ~/Other/gh"
+alias rb0master="git ch master && git p && git ch - && git rb master"
+alias rbmain="git ch main && git p && git ch - && git rb main"
+
+alias cdmusic="cd ~/Music/Seasons/2024-c"
+alias ytmp3="yt-dlp --extract-audio --audio-format mp3 --no-keep-fragments"
+alias opass="pass otp"
+
+hotpatch1 () {
+  git checkout -b "$(date '+release-%Y-%m-%d')"
+}
+
+# do cherry-picks in the branch and then do:
+hotpatch2 () {
+  git push origin "$(git rev-parse --abbrev-ref HEAD)" --no-verify &&
+    gh pr create --fill --base production --title "$(date '+Release %Y-%m-%d')" &&
+    gh pr view --web
+}
+
+release () {
+  hotpatch1 && hotpatch2
+}
