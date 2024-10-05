@@ -38,13 +38,14 @@ alias ogh="pass otp primary/github | pbcopy"
 alias ogl="pass otp primary/gitlab | pbcopy"
 
 alias cdcal="cd ~/bb/neeto-cal/neeto-cal-web"
-alias cdgh="cd ~/Other/gh"
+alias cdgh="cd ~/other/gh"
 alias rb0master="git ch master && git p && git ch - && git rb master"
 alias rbmain="git ch main && git p && git ch - && git rb main"
 
 alias cdmusic="cd ~/Music/Seasons/2024-c"
 alias ytmp3="yt-dlp --extract-audio --audio-format mp3 --no-keep-fragments"
 alias opass="pass otp"
+alias olog="nohup kate ~/bb/log.md > /dev/null 2>&1 &"
 
 hotpatch1 () {
   git checkout -b "$(date '+release-%Y-%m-%d')"
