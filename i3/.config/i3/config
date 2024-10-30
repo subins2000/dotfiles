@@ -230,6 +230,7 @@ focus_on_window_activation none
 
 #Assigning programs to workspaces
 assign [class="(?i)dolphin"] 0
+assign [class="(?i)kate"] 0
 assign [class="(?i)subl"] 1-coding
 for_window [class="(?i)subl"] focus
 assign [class="(?i)codium"] 1-coding

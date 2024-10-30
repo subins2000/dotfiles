@@ -1,10 +1,6 @@
 [user]
 	email = mail@subinsb.com
 	name = Subin Siby
-[url "https://anongit.kde.org/"]
-	insteadOf = kde:
-[url "git@git.kde.org:"]
-	pushInsteadOf = kde:
 [gitreview]
 	remote = origin
 	username = subins2000
@@ -24,3 +20,9 @@
 	rb = rebase
 	p = pull
 	last = log -1 HEAD
+[init]
+	defaultBranch = main
+[url "https://invent.kde.org/"]
+	insteadOf = kde:
+[url "ssh://git@invent.kde.org/"]
+	pushInsteadOf = kde:

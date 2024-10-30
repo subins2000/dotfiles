@@ -24,6 +24,7 @@ fi
 alias t="todo-txt"
 alias pbcopy='xclip -selection clipboard'
 alias pbpaste='xclip -selection clipboard -o'
+alias code="codium"
 
 export HISTFILESIZE=5000
 
@@ -61,3 +62,5 @@ hotpatch2 () {
 release () {
   hotpatch1 && hotpatch2
 }
+
+v4lctl bright 75%
