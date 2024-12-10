@@ -1,7 +1,7 @@
 # sway themeing
 export QT_QPA_PLATFORMTHEME=qt5ct
 
-export PATH=~/go/bin:/usr/local/bin:$PATH
+export PATH=~/go/bin:/usr/local/go/bin:/usr/local/bin:$PATH
 export LD_LIBRARY_PATH=/usr/local/lib:$LD_LIBRARY_PATH
 export PKG_CONFIG_PATH=/usr/local/lib/pkgconfig:$PKG_CONFIG_PATH
 
@@ -64,3 +64,7 @@ release () {
 }
 
 v4lctl bright 75%
+
+export TUNNELTO_INSTALL="/home/deb/.tunnelto"
+export PATH="$TUNNELTO_INSTALL/bin:$PATH"
+
