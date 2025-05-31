@@ -76,3 +76,6 @@ release () {
 }
 
 v4lctl bright 75%
+
+export TUNNELTO_INSTALL="/home/deb/.tunnelto"
+export PATH="$TUNNELTO_INSTALL/bin:$PATH"
