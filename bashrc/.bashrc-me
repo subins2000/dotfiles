@@ -1,7 +1,7 @@
 # sway themeing
 export QT_QPA_PLATFORMTHEME=qt5ct
 
-export PATH=~/go/bin:/usr/local/bin:$PATH
+export PATH=~/Applications/bin:~/go/bin:~/.local/bin:/usr/local/go/bin:/usr/local/bin:$PATH
 export LD_LIBRARY_PATH=/usr/local/lib:$LD_LIBRARY_PATH
 export PKG_CONFIG_PATH=/usr/local/lib/pkgconfig:$PKG_CONFIG_PATH
 
@@ -11,6 +11,10 @@ export GTK_IM_MODULE=ibus
 export QT4_IM_MODULE=xim
 export QT_IM_MODULE=xim
 export XMODIFIERS=@im=ibus
+
+export ANDROID_HOME=$HOME/Android/Sdk
+export PATH=$PATH:$ANDROID_HOME/emulator
+export PATH=$PATH:$ANDROID_HOME/platform-tools
 
 eval "$(starship init bash)"
 eval "$(mise activate bash)"
@@ -43,7 +47,7 @@ alias cdgh="cd ~/other/gh"
 alias rb0master="git ch master && git p && git ch - && git rb master"
 alias rbmain="git ch main && git p && git ch - && git rb main"
 
-alias cdmusic="cd ~/Music/Seasons/2024-c"
+alias cdmusic="cd ~/Music/Seasons/2025-a"
 alias ytmp3="yt-dlp --extract-audio --audio-format mp3 --no-keep-fragments"
 alias opass="pass otp"
 alias olog="nohup kate ~/bb/log.md > /dev/null 2>&1 &"
@@ -57,6 +61,14 @@ hotpatch2 () {
   git push origin "$(git rev-parse --abbrev-ref HEAD)" --no-verify &&
     gh pr create --fill --base production --title "$(date '+Release %Y-%m-%d')" &&
     gh pr view --web
+}
+
+deploy() {
+  git checkout production
+  git pull
+  git merge $(date '+release-%Y-%m-%d')
+  git push --no-verify
+  git br -D $(date "+release-%Y-%m-%d")
 }
 
 release () {

@@ -25,6 +25,10 @@ set $darkwhite   #a89984
 set $background  #000000
 set $transparent #00000000
 
+set $workspace1 1-കളരി
+set $workspace2 2-chat
+set $workspace3 3-അലയൽ
+
 # Windows button
 set $mod Mod4
 
@@ -109,9 +113,9 @@ bindsym $mod+a focus parent
 
 # switch to workspace
 bindsym $mod+grave workspace 0
-bindsym $mod+1 workspace 1-coding
-bindsym $mod+2 workspace 2-chat
-bindsym $mod+3 workspace 3-internet
+bindsym $mod+1 workspace $workspace1
+bindsym $mod+2 workspace $workspace2
+bindsym $mod+3 workspace $workspace3
 bindsym $mod+4 workspace 4-സംഗീതം
 bindsym $mod+5 workspace 5-സിനിമ
 bindsym $mod+6 workspace 6-പഠിപ്പ്
@@ -122,9 +126,9 @@ bindsym $mod+0 workspace 10
 
 # move focused container to workspace
 bindsym $mod+Shift+grave move container to workspace 0
-bindsym $mod+Shift+1 move container to workspace 1-coding
-bindsym $mod+Shift+2 move container to workspace 2-chat
-bindsym $mod+Shift+3 move container to workspace 3-internet
+bindsym $mod+Shift+1 move container to workspace $workspace1
+bindsym $mod+Shift+2 move container to workspace $workspace2
+bindsym $mod+Shift+3 move container to workspace $workspace3
 bindsym $mod+Shift+4 move container to workspace 4-സംഗീതം
 bindsym $mod+Shift+5 move container to workspace 5-സിനിമ
 bindsym $mod+Shift+6 move container to workspace 6-പഠിപ്പ്
@@ -231,22 +235,22 @@ focus_on_window_activation none
 #Assigning programs to workspaces
 assign [class="(?i)dolphin"] 0
 assign [class="(?i)kate"] 0
-assign [class="(?i)subl"] 1-coding
+assign [class="(?i)subl"] $workspace1
 for_window [class="(?i)subl"] focus
-assign [class="(?i)codium"] 1-coding
-assign [class="(?i)code"] 1-coding
-assign [class="(?i)chrome"] 3-internet
+assign [class="(?i)codium"] $workspace1
+assign [class="(?i)code"] $workspace1
+assign [class="(?i)chrome"] $workspace3
 for_window [class="(?i)chrome"] focus
-assign [class="(?i)firefox"] 3-internet
-for_window [class="(?i)firefox"] focus
-assign [class="(?i)Konsole"] 2-chat
-assign [class="(?i)Slack"] 2-chat
+assign [class="(?i)Konsole"] $workspace2
+assign [class="(?i)Slack"] $workspace2
 assign [class="(?i)Clementine"] 4-സംഗീതം
 assign [class="(?i)Telegram"] 4-സംഗീതം
 assign [class="(?i)Element"] 4-സംഗീതം
 assign [class="(?i)thunderbird"] 5-സിനിമ
 assign [class="(?i)kmail"] 5-സിനിമ
 assign [class="(?i)smplayer"] 5-സിനിമ
+assign [class="(?i)firefox"] 5-സിനിമ
+for_window [class="(?i)firefox"] focus
 
 # class                 border  bground text    indicator child_border
 client.focused          #6272A4 #6272A4 #F8F8F2 #6272A4   #6272A4

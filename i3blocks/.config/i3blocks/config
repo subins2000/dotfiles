@@ -124,7 +124,7 @@ interval=30
 [time]
 # You're old kid
 # command=echo '2020-01-20 20:20:20'
-command=echo $(date '+%Y-%m-%d %H:%M:%S') $(date --universal '+%H:%M')
+command=echo $(date --utc '+%Y-%m-%d %H:%M:%S') UTC
 interval=5
 
 # OpenVPN support
