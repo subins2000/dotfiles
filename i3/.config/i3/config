@@ -28,6 +28,7 @@ set $transparent #00000000
 set $workspace1 1-കളരി
 set $workspace2 2-chat
 set $workspace3 3-അലയൽ
+set $workspace5 5-സിനിമ
 
 # Windows button
 set $mod Mod4
@@ -117,7 +118,7 @@ bindsym $mod+1 workspace $workspace1
 bindsym $mod+2 workspace $workspace2
 bindsym $mod+3 workspace $workspace3
 bindsym $mod+4 workspace 4-സംഗീതം
-bindsym $mod+5 workspace 5-സിനിമ
+bindsym $mod+5 workspace $workspace5
 bindsym $mod+6 workspace 6-പഠിപ്പ്
 bindsym $mod+7 workspace 7
 bindsym $mod+8 workspace 8
@@ -130,7 +131,7 @@ bindsym $mod+Shift+1 move container to workspace $workspace1
 bindsym $mod+Shift+2 move container to workspace $workspace2
 bindsym $mod+Shift+3 move container to workspace $workspace3
 bindsym $mod+Shift+4 move container to workspace 4-സംഗീതം
-bindsym $mod+Shift+5 move container to workspace 5-സിനിമ
+bindsym $mod+Shift+5 move container to workspace $workspace5
 bindsym $mod+Shift+6 move container to workspace 6-പഠിപ്പ്
 bindsym $mod+Shift+7 move container to workspace 7
 bindsym $mod+Shift+8 move container to workspace 8
@@ -246,10 +247,10 @@ assign [class="(?i)Slack"] $workspace2
 assign [class="(?i)Clementine"] 4-സംഗീതം
 assign [class="(?i)Telegram"] 4-സംഗീതം
 assign [class="(?i)Element"] 4-സംഗീതം
-assign [class="(?i)thunderbird"] 5-സിനിമ
-assign [class="(?i)kmail"] 5-സിനിമ
-assign [class="(?i)smplayer"] 5-സിനിമ
-assign [class="(?i)firefox"] 5-സിനിമ
+assign [class="(?i)thunderbird"] $workspace5
+assign [class="(?i)kmail"] $workspace5
+assign [class="(?i)smplayer"] $workspace5
+assign [class="(?i)firefox"] $workspace3
 for_window [class="(?i)firefox"] focus
 
 # class                 border  bground text    indicator child_border

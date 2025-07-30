@@ -47,7 +47,7 @@ alias cdgh="cd ~/other/gh"
 alias rb0master="git ch master && git p && git ch - && git rb master"
 alias rbmain="git ch main && git p && git ch - && git rb main"
 
-alias cdmusic="cd ~/Music/Seasons/2025-a"
+alias cdmusic="cd ~/Music/Seasons/2025-b"
 alias ytmp3="yt-dlp --extract-audio --audio-format mp3 --no-keep-fragments"
 alias opass="pass otp"
 alias olog="nohup kate ~/bb/log.md > /dev/null 2>&1 &"
