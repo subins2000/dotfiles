@@ -28,12 +28,12 @@ command=/usr/share/i3blocks/$BLOCK_NAME
 separator_block_width=15
 markup=none
 
-[weather]
-command=curl -Ss 'https://wttr.in?0&T&Q' | cut -c 16- | head -2 | xargs echo
-instance=1254187
-align=right
-color=#ff5f00
-interval=3600
+#[weather]
+#command=curl -Ss 'https://wttr.in?0&T&Q' | cut -c 16- | head -2 | xargs echo
+#instance=1254187
+#align=right
+#color=#ff5f00
+#interval=3600
 
 # Generic media player support
 # This displays "ARTIST - SONG" if a music is playing.
