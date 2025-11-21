@@ -299,4 +299,4 @@ bindsym $mod+Shift+S floating toggle; sticky enable
 # bindsym $mod+Shift+S floating toggle; resize set 400 300; sticky enable; move window to position 1900 1100
 
 # Mute chromium shortcut
-bindsym Shift+F12 exec $HOME/.config/i3/i3scripts/mute-app.sh Chromium
+bindsym Shift+F12 exec "amixer set Capture toggle"
