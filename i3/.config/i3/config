@@ -294,8 +294,6 @@ exec_always --no-startup-id killall random-wallpaper.sh
 exec_always --no-startup-id $HOME/.config/i3/i3scripts/random-wallpaper.sh 500
 #exec_always --no-startup-id $HOME/.config/i3/i3scripts/process-wallpaper.sh 500
 
-no_focus [window_type="notification"]
-
 # make firefox picture in picture sticky across all workspaces
 for_window [title="Picture-in-Picture"] sticky enable
 bindsym $mod+Shift+S floating toggle; sticky enable
